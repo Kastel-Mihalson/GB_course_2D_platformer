@@ -8,6 +8,7 @@ public class CustomAnim
 
     public bool loop;
     public bool sleeps;
+    public bool endAnim;
 
     public float speed = 10;
     public float counter;
@@ -26,6 +27,11 @@ public class CustomAnim
         {
             counter = animSpritesSequence.Count - 1;
             sleeps = true;
+        }
+
+        if (!loop && !endAnim && counter > animSpritesSequence.Count)
+        {
+            endAnim = true;
         }
     }
 }

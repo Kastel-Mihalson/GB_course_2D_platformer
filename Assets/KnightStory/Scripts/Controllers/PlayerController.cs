@@ -5,68 +5,67 @@ public class PlayerController
     private const string Horizontal = nameof(Horizontal);
     private const string Vertical = nameof(Vertical);
 
-    private float _yVelocity;
-
     private PlayerView _playerView;
-    private SpritesAnimator _spritesAnimator;
+    private SpriteRenderer _spriteRenderer;
+    private Rigidbody2D _rigidbody;
+    private ContactsPoller _contactsPoller;
+    private Animator _animator;
 
-    public PlayerController(PlayerView playerView, SpritesAnimator spritesAnimator)
+    private float _horizontal;
+    private bool _doJump;
+    private bool _attack;
+    private bool _rolling;
+
+    public PlayerController(PlayerView playerV2View)
     {
-        _playerView = playerView;
-        _spritesAnimator = spritesAnimator;
+        _playerView = playerV2View;
+        _rigidbody = playerV2View.GetComponent<Rigidbody2D>();
+        _spriteRenderer = playerV2View.GetComponent<SpriteRenderer>();
+        _animator = playerV2View.GetComponent<Animator>();
+        _contactsPoller = new ContactsPoller(playerV2View.GetComponent<Collider2D>());
     }
 
     public void Update()
     {
-        var doJump = Input.GetAxis(Vertical) > 0;
-        var xAxisInput = Input.GetAxis(Horizontal);
-        var isGoSideWay = Mathf.Abs(xAxisInput) > _playerView.MovingTresh;
+        _horizontal = Input.GetAxis(Horizontal);
+        _doJump = Input.GetAxis(Vertical) > 0;
+        _attack = Input.GetKey(KeyCode.Mouse0);
+        _rolling = Input.GetKey(KeyCode.LeftShift);
+    }
 
-        if (isGoSideWay) GoSideWay(xAxisInput);
+    public void FixedUpdate()
+    {
+        var isGoSideWay = Mathf.Abs(_horizontal) > _playerView.MovingTresh;
+        var newVelocity = 0f;
 
-        if (IsGrounded())
+        _contactsPoller.Update();
+
+        if (isGoSideWay) _spriteRenderer.flipX = _horizontal < 0;
+        if (isGoSideWay &&
+            (_horizontal > 0 || !_contactsPoller.HasLeftContacts) &&
+            (_horizontal < 0 || !_contactsPoller.HasRightContacts))
         {
-            _spritesAnimator.StartAnim(_playerView.SpriteRenderer, 
-                isGoSideWay ? AnimState.Run : AnimState.Idle, true, _playerView.AnimationsSpeed);
-
-            if (doJump && Mathf.Approximately(_yVelocity, 0))
-            {
-                _yVelocity = _playerView.JumpStartSpeed;
-            } 
-            else if (_yVelocity < 0)
-            {
-                _yVelocity = 0;
-                MovementCharacter();
-            }
+            _animator.SetBool("IsRunning", true);
+            newVelocity = Time.fixedDeltaTime * _playerView.WalkSpeed * (_horizontal < 0 ? -1 : 1);
         } else
         {
-            LandingCharater();
+            _animator.SetBool("IsRunning", false);
         }
-    }
 
-    private void LandingCharater()
-    {
-        _yVelocity += _playerView.Acceleration * Time.deltaTime;
+        _rigidbody.velocity = _rigidbody.velocity.Change(x: newVelocity);
 
-        if (Mathf.Abs(_yVelocity) > _playerView.FlyTresh)
-            _spritesAnimator.StartAnim(_playerView.SpriteRenderer, AnimState.Jump, true, _playerView.AnimationsSpeed);
-
-        _playerView.transform.position += Vector3.up * (Time.deltaTime * _yVelocity);
-    }
-
-    private void MovementCharacter()
-    {
-        _playerView.transform.position = _playerView.transform.position.Change(y: _playerView.GroundLevel);
-    }
-
-    private bool IsGrounded()
-    {
-        return _playerView.transform.position.y <= _playerView.GroundLevel && _yVelocity <= 0;
-    }
-
-    private void GoSideWay(float xAxisInput)
-    {
-        _playerView.transform.position += Vector3.right * (Time.deltaTime * _playerView.WalkSpeed * (xAxisInput < 0 ? -1 : 1));
-        _playerView.SpriteRenderer.flipX = xAxisInput < 0;
+        if (_contactsPoller.IsGrounded && _doJump && Mathf.Abs(_rigidbody.velocity.y) <= _playerView.FlyTresh)
+        {
+            _animator.SetTrigger("Jump");
+            _rigidbody.AddForce(Vector2.up * _playerView.JumpStartSpeed);
+        }
+        if (_attack)
+        {
+            _animator.SetTrigger("Attack");
+        }
+        if (_rolling)
+        {
+            _animator.SetTrigger("Rolling");
+        }
     }
 }

@@ -45,3 +45,12 @@ MonoBehaviour:
     - {fileID: 21300084, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
     - {fileID: 21300086, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
     - {fileID: 21300088, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+  - animState: 4
+    animSpriteSequence:
+    - {fileID: 21300036, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300038, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300040, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300042, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300044, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300046, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
+    - {fileID: 21300048, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}

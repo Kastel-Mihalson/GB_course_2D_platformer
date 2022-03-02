@@ -11,6 +11,14 @@ public class SpritesAnimator
         _animSpriteData = animSpriteData;
     }
 
+    private bool _endAnim;
+
+    public bool EndAnim
+    {
+        get => _endAnim;
+        set => _endAnim = value;
+    }
+
     public void StartAnim(SpriteRenderer spriteRenderer, AnimState animState, bool loop, float speed)
     {
         if (_activeAnim.TryGetValue(spriteRenderer, out CustomAnim animation))
@@ -19,6 +27,7 @@ public class SpritesAnimator
             animation.speed = speed;
             animation.sleeps = false;
 
+            if (animation.endAnim) EndAnim = true;
             if (animation.animState == animState) return;
 
             animation.animState = animState;
