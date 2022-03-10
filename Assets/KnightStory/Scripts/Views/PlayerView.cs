@@ -2,6 +2,16 @@ using UnityEngine;
 
 public class PlayerView : MonoBehaviour
 {
+
+    [SerializeField]
+    private Rigidbody2D _rigidbody;
+
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+
+    [SerializeField]
+    private Animator _animator;
+
     [SerializeField]
     private Collider2D _deadLine;
 
@@ -20,6 +30,12 @@ public class PlayerView : MonoBehaviour
     [SerializeField]
     private float _flyTresh = 0.3f;
 
+    public Rigidbody2D Rigidbody => _rigidbody;
+
+    public SpriteRenderer SpriteRenderer => _spriteRenderer;
+
+    public Animator Animator => _animator;
+
     public float WalkSpeed => _walkSpeed;
 
     public float JumpStartSpeed => _jumpStartSpeed;
@@ -31,32 +47,36 @@ public class PlayerView : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var interactivObject = collision.GetComponent<InteractiveObject>();
+        
+        switch (interactivObject.GetType().Name)
+        {
+            case nameof(SoulView):
+                Destroy(collision.gameObject);
+                break;
 
-        if (interactivObject is SoulView)
-        {
-            Destroy(collision.gameObject);
-        }
-        if (interactivObject is DeathLineView)
-        {
-            transform.position = _playerStartPos.position;
-        }
-        if (interactivObject is ThornTrapView)
-        {
-            Debug.Log("Ouch!");
-            transform.position = _playerStartPos.position;
-        }
-        if (interactivObject is CheckPointView)
-        {
-            _playerStartPos.position = collision.transform.position.Change(y: collision.transform.position.y / 2);
-            collision.gameObject.GetComponent<Collider2D>().enabled = false;
-            Debug.Log("Checkpoint! Save player position");
-        }
-        if (interactivObject is LevelEndView)
-        {
-            var levelEndView = (LevelEndView)interactivObject;
+            case nameof(DeathLineView):
+                transform.position = _playerStartPos.position;
+                break;
 
-            levelEndView.ShowCanvas();
-            Debug.Log("Level passed!");
+            case nameof(ThornTrapView):
+                Debug.Log("Ouch!");
+                transform.position = _playerStartPos.position;
+                break;
+
+            case nameof(CheckPointView):
+                _playerStartPos.position = collision.transform.position.Change(y: collision.transform.position.y / 2);
+                collision.gameObject.GetComponent<Collider2D>().enabled = false;
+                Debug.Log("Checkpoint! Save player position");
+                break;
+
+            case nameof(LevelEndView):
+                LevelEndView levelEndView = (LevelEndView)interactivObject;
+                levelEndView.ShowCanvas();
+                Debug.Log("Level passed!");
+                break;
+
+            default:
+                break;
         }
     }
 }
