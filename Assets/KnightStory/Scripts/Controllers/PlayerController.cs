@@ -16,13 +16,13 @@ public class PlayerController
     private bool _attack;
     private bool _rolling;
 
-    public PlayerController(PlayerView playerV2View)
+    public PlayerController(PlayerView playerView)
     {
-        _playerView = playerV2View;
-        _rigidbody = playerV2View.GetComponent<Rigidbody2D>();
-        _spriteRenderer = playerV2View.GetComponent<SpriteRenderer>();
-        _animator = playerV2View.GetComponent<Animator>();
-        _contactsPoller = new ContactsPoller(playerV2View.GetComponent<Collider2D>());
+        _playerView = playerView;
+        _spriteRenderer = playerView.SpriteRenderer;
+        _rigidbody = playerView.Rigidbody;
+        _animator = playerView.Animator;
+        _contactsPoller = new ContactsPoller(playerView.GetComponent<Collider2D>());
     }
 
     public void Update()
