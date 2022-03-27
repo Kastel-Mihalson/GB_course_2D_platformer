@@ -29,10 +29,7 @@ public class TurretController
     private void TurretRotate()
     {
         var dir = _target.position - _turretView.transform.position;
-        var angle = Vector3.Angle(-Vector3.up, dir);
-        var axis = Vector3.Cross(-Vector3.up, dir);
-
-        _turretView.transform.rotation = Quaternion.AngleAxis(angle, axis);
+        _turretView.transform.rotation = GetAngleAxis(dir, -Vector3.up);
     }
 
     public void FixedUpdate()
@@ -45,21 +42,25 @@ public class TurretController
             if (_arrowGO != null) Destroy();
 
             _arrowSpawnTime = _delay;
-
             _arrowGO = Object.Instantiate(_arrowPrefab, _arrowSpawner.position, Quaternion.identity);
             _rigidbody = _arrowGO.GetComponent<Rigidbody2D>();
 
             var dir = _target.position - _arrowGO.transform.position;
-            var angle = Vector3.Angle(-Vector3.left, dir);
-            var axis = Vector3.Cross(-Vector3.left, dir);
 
-            _arrowGO.transform.rotation = Quaternion.AngleAxis(angle, axis);
-
+            _arrowGO.transform.rotation = GetAngleAxis(dir, -Vector3.left);
             _rigidbody.AddForce(dir.normalized * ShootForce);
         }
     }
 
-    public void Destroy()
+    private Quaternion GetAngleAxis(Vector3 dir, Vector3 Axis)
+    {
+        var angle = Vector3.Angle(Axis, dir);
+        var axis = Vector3.Cross(Axis, dir);
+
+        return Quaternion.AngleAxis(angle, axis);
+    }
+
+    private void Destroy()
     {
         Object.Destroy(_arrowGO);
     }

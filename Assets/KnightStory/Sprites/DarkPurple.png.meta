@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 0ed3d1cb10d752e47b4475743dafc77f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3864255773882901872
+    second: DarkPurple_0
+  - first:
+      213: -6068038144853735072
+    second: DarkPurple_1
+  - first:
+      213: -2002620013411147431
+    second: DarkPurple_2
+  - first:
+      213: 332559083450299244
+    second: DarkPurple_3
+  - first:
+      213: 3865835565139043287
+    second: DarkPurple_4
+  - first:
+      213: -1796993860422678393
+    second: DarkPurple_5
+  - first:
+      213: 2236510592349061288
+    second: DarkPurple_6
+  - first:
+      213: -4689152789344764428
+    second: DarkPurple_7
+  - first:
+      213: 4964150736878101463
+    second: DarkPurple_8
+  - first:
+      213: 2466499325767929843
+    second: DarkPurple_9
+  - first:
+      213: 1086561019949292484
+    second: DarkPurple_10
+  - first:
+      213: -1947094428554264012
+    second: DarkPurple_11
+  - first:
+      213: 1144536205773876057
+    second: DarkPurple_12
+  - first:
+      213: 3398474928146055970
+    second: DarkPurple_13
+  - first:
+      213: -3334678196398616615
+    second: DarkPurple_14
+  - first:
+      213: -6921525299852345398
+    second: DarkPurple_15
+  - first:
+      213: 6525896143180446277
+    second: DarkPurple_16
+  - first:
+      213: 372898275200748053
+    second: DarkPurple_17
+  - first:
+      213: -8968187494972008478
+    second: DarkPurple_18
+  - first:
+      213: -1867113954268296289
+    second: DarkPurple_19
+  - first:
+      213: 1543538720416474156
+    second: DarkPurple_20
+  - first:
+      213: 4873004732316626589
+    second: DarkPurple_21
+  - first:
+      213: 6203264387508625133
+    second: DarkPurple_22
+  - first:
+      213: -7954151403529255332
+    second: DarkPurple_23
+  - first:
+      213: -1612427780201848820
+    second: DarkPurple_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DarkPurple_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 271
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075ea83172890a530800000000000000
+      internalID: 3864255773882901872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 271
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0690974057ff9cba0800000000000000
+      internalID: -6068038144853735072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 271
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9516a8845b34534e0800000000000000
+      internalID: -2002620013411147431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 271
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6372e379bc7d9400800000000000000
+      internalID: 332559083450299244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 271
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d32f24e6f436a530800000000000000
+      internalID: 3865835565139043287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 204
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788c2f5da9bcf07e0800000000000000
+      internalID: -1796993860422678393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 204
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a04d51c88ea90f10800000000000000
+      internalID: 2236510592349061288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 204
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdb29dd168cceeb0800000000000000
+      internalID: -4689152789344764428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_8
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 204
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3ec134bc434e440800000000000000
+      internalID: 4964150736878101463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 204
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff43279114ca3220800000000000000
+      internalID: 2466499325767929843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 137
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb1dd4ad7d341f00800000000000000
+      internalID: 1086561019949292484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 137
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43281e1fee78af4e0800000000000000
+      internalID: -1947094428554264012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_12
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 137
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ba9b97d9532ef00800000000000000
+      internalID: 1144536205773876057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 137
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2238736f0fec92f20800000000000000
+      internalID: 3398474928146055970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_14
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 137
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df8b6729d7d8b1d0800000000000000
+      internalID: -3334678196398616615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 70
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acffb6e596dc1ff90800000000000000
+      internalID: -6921525299852345398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 70
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54abc5f67f3a09a50800000000000000
+      internalID: 6525896143180446277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 70
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a42be610dcc2500800000000000000
+      internalID: 372898275200748053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_18
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 70
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7d7132df89a8380800000000000000
+      internalID: -8968187494972008478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_19
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 70
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bc9a040cda616e0800000000000000
+      internalID: -1867113954268296289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c242c77c940cb6510800000000000000
+      internalID: 1543538720416474156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 3
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ea78a5cf360a340800000000000000
+      internalID: 4873004732316626589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 3
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee5849181c661650800000000000000
+      internalID: 6203264387508625133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_23
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56c6fef07d2d9190800000000000000
+      internalID: -7954151403529255332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurple_24
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00e8171a718f99e0800000000000000
+      internalID: -1612427780201848820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
