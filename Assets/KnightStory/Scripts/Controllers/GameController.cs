@@ -17,17 +17,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private AnimSpriteData _animSpriteData;
 
-    [SerializeField]
-    private AiConfig _config;
-
-    [SerializeField]
-    private EnemyView _enemyView;
-
     private ParalaxManager _paralaxManager;
     private SpritesAnimator _spritesAnimator;
     private PlayerController _playerController;
     private TurretController _turretController;
-    private SimplePatrolAiController _simplePatrolAi;
 
     private void Start()
     {
@@ -35,7 +28,6 @@ public class GameController : MonoBehaviour
         _spritesAnimator = new SpritesAnimator(_animSpriteData);
         _playerController = new PlayerController(_playerView);
         _turretController = new TurretController(_turretView, _playerView.transform);
-        _simplePatrolAi = new SimplePatrolAiController(_enemyView, _config);
     }
 
     private void Update()
@@ -50,6 +42,5 @@ public class GameController : MonoBehaviour
     {
         _playerController.FixedUpdate();
         _turretController.FixedUpdate();
-        _simplePatrolAi.FixedUpdate();
     }
 }
