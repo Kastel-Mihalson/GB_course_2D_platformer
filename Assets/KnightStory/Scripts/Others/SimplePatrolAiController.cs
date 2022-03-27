@@ -28,7 +28,6 @@ public class SimplePatrolAiController
             _target = GetNextWayPoint();
 
         var direction = ((Vector2)_target.position - fromPosition).normalized;
-
         return _config.Speed * direction;
     }
 
