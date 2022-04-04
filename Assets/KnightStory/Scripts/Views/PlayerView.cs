@@ -48,35 +48,41 @@ public class PlayerView : MonoBehaviour
     {
         var interactivObject = collision.GetComponent<InteractiveObject>();
         
-        switch (interactivObject.GetType().Name)
+        if (interactivObject is InteractiveObject)
         {
-            case nameof(SoulView):
-                Destroy(collision.gameObject);
-                break;
+            switch (interactivObject.GetType().Name)
+            {
+                case nameof(SoulView):
+                    Destroy(collision.gameObject);
+                    break;
 
-            case nameof(DeathLineView):
-                transform.position = _playerStartPos.position;
-                break;
+                case nameof(DeathLineView):
+                    transform.position = _playerStartPos.position;
+                    break;
 
-            case nameof(ThornTrapView):
-                Debug.Log("Ouch!");
-                transform.position = _playerStartPos.position;
-                break;
+                case nameof(ThornTrapView):
+                    Debug.Log("Ouch!");
+                    transform.position = _playerStartPos.position;
+                    break;
 
-            case nameof(CheckPointView):
-                _playerStartPos.position = collision.transform.position.Change(y: collision.transform.position.y / 2);
-                collision.gameObject.GetComponent<Collider2D>().enabled = false;
-                Debug.Log("Checkpoint! Save player position");
-                break;
+                case nameof(CheckPointView):
+                    _playerStartPos.position = collision.transform.position.Change(y: collision.transform.position.y / 2);
+                    collision.gameObject.GetComponent<Collider2D>().enabled = false;
+                    Debug.Log("Checkpoint! Save player position");
+                    break;
 
-            case nameof(LevelEndView):
-                LevelEndView levelEndView = (LevelEndView)interactivObject;
-                levelEndView.ShowCanvas();
-                Debug.Log("Level passed!");
-                break;
+                case nameof(LevelEndView):
+                    LevelEndView levelEndView = (LevelEndView)interactivObject;
+                    levelEndView.ShowCanvas();
+                    Debug.Log("Level passed!");
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
+        } else
+        {
+
         }
     }
 }

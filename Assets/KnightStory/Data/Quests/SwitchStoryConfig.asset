@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ce5540e4fba87408465b9ddebd5c81, type: 3}
+  m_Name: SwitchStoryConfig
+  m_EditorClassIdentifier: 
+  _quests:
+  - {fileID: 11400000, guid: f7b300dd652a83048ad8ff51305f439c, type: 2}
+  - {fileID: 11400000, guid: f29520e63c4a8994eb55ae81b6d5ad09, type: 2}
+  _questStoryType: 0
