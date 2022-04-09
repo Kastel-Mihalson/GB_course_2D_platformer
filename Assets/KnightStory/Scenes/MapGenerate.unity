@@ -31347,14 +31347,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276524edc4d17504695cf7ce0b219517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileMap: {fileID: 1118081767}
-  _tiles:
-  - _tileType: 0
-    _tile: {fileID: 11400000, guid: f0cb8408818150f4e870c2c61910aa4c, type: 2}
-  _mapWidth: 100
-  _mapHeight: 60
-  _smoothFactor: 1
-  _randomFillPercent: 50
+  _tileMap: {fileID: 0}
+  _tiles: []
+  _mapWidth: 0
+  _mapHeight: 0
+  _smoothFactor: 0
+  _randomFillPercent: 0
 --- !u!1 &856616729
 GameObject:
   m_ObjectHideFlags: 0
